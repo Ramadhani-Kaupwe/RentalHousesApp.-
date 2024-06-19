@@ -1,0 +1,66 @@
+html
+Copy code
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VYUMBA VYA KUPANGA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VYUMBA VYA KUPANGA TANZANIA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Vyumba au nyumba zilizopo</a></li>
+                <li><a href="register.html">Dalali/Mwenye nyumba? Jisajili hapa</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="search">
+            <h2>Tafuta chumba, nyumba ya kupanga, au viwanja</h2>
+            <input type="text" id="searchInput" placeholder="Tafuta kwa mkoa/mahali, bei, n.k.">
+            <button onclick="searchProperties()">Tafuta</button>
+        </section>
+        
+        <section id="listing">
+            <h2>Weka Bidhaa Yako</h2>
+            <form id="add-listing-form">
+                <label for="title">andika unachouza:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="description">Maelezo:</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <label for="location">Eneo:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="price">bei (kwa mwezi, n.k):</label>
+                <input type="number" id="price" name="price" required>
+                
+                <button type="submit">Add Listing</button>
+            </form>
+        </section>
+        
+        <section id="propertyList">
+            <h2>Property Listings</h2>
+            <!-- Property items will be injected here by JavaScript -->
+        </section>
+        
+        <section id="chat">
+            <h2>Chat Room</h2>
+            <div id="chat-messages" aria-live="polite"></div>
+            <form id="chat-form">
+                <input type="text" id="chat-message" name="chat-message" placeholder="Type your message here" aria-label="Type your message here">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
